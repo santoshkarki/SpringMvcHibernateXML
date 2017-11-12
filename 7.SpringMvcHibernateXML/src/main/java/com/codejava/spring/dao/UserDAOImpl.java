@@ -1,13 +1,13 @@
-package net.codejava.spring.dao;
+package com.codejava.spring.dao;
 
 import java.util.List;
-
-import net.codejava.spring.model.User;
 
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.codejava.spring.model.User;
 
 public class UserDAOImpl implements UserDAO {
 	private SessionFactory sessionFactory;

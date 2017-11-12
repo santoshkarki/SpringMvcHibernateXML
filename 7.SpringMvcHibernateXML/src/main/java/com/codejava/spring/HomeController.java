@@ -1,14 +1,14 @@
-package net.codejava.spring;
+package com.codejava.spring;
 
 import java.util.List;
-
-import net.codejava.spring.dao.UserDAO;
-import net.codejava.spring.model.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.codejava.spring.dao.UserDAO;
+import com.codejava.spring.model.User;
 
 /**
  * Handles requests for the application home page.
@@ -21,6 +21,7 @@ public class HomeController {
 	
 	@RequestMapping(value="/")
 	public ModelAndView home() {
+		System.out.println("Welcome");
 		List<User> listUsers = userDao.list();
 		ModelAndView model = new ModelAndView("home");
 		model.addObject("userList", listUsers);

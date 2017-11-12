@@ -1,8 +1,8 @@
-package net.codejava.spring.dao;
+package com.codejava.spring.dao;
 
 import java.util.List;
 
-import net.codejava.spring.model.User;
+import com.codejava.spring.model.User;
 
 public interface UserDAO {
 	public List<User> list();

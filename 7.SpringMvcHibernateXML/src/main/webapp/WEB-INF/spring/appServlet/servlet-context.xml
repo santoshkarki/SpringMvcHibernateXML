@@ -31,7 +31,7 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
-	<context:component-scan base-package="net.codejava.spring" />
+	<context:component-scan base-package="com.codejava.spring" />
 
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"
 		destroy-method="close">
@@ -71,7 +71,7 @@
 		<!--  Or use annotations in Model class for Mapping class with table as: -->
 		<property name="annotatedClasses">
 			<list>
-				<value>net.codejava.spring.model.User</value>
+				<value>com.codejava.spring.model.User</value>
 			</list>
 		</property>
 		
@@ -85,7 +85,7 @@
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 
-	<bean id="userDao" class="net.codejava.spring.dao.UserDAOImpl">
+	<bean id="userDao" class="com.codejava.spring.dao.UserDAOImpl">
 		<constructor-arg>
 			<ref bean="sessionFactory" />
 		</constructor-arg>
