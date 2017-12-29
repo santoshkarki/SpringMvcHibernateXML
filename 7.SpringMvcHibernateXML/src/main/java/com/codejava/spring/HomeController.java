@@ -21,7 +21,7 @@ public class HomeController {
 	
 	@RequestMapping(value="/")
 	public ModelAndView home() {
-		System.out.println("Welcome");
+		System.out.println("Welcome1");
 		List<User> listUsers = userDao.list();
 		ModelAndView model = new ModelAndView("home");
 		model.addObject("userList", listUsers);
